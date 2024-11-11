@@ -7,9 +7,11 @@ import io.grpc.ServerInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.grpc.autoconfigure.server.GlobalServerInterceptor;
 import org.springframework.stereotype.Component;
 
 @Component
+@GlobalServerInterceptor
 public class LoggingServerInterceptor implements ServerInterceptor {
 
 	private final Logger logger = LoggerFactory.getLogger(LoggingServerInterceptor.class);
